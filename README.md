@@ -23,7 +23,7 @@ git clone https://github.com/Sawanoza/SOEN357.git
 
 2. Navigate to the application folder:
 ```
-cd WorldEats
+cd SOEN357/WorldEats
 ```
 
 3. Install Dependencies
