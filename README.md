@@ -16,12 +16,22 @@ Marc-Yves Malchev (Sawanoza) 40265238
 
 
 ## How to Run the Project:
-Prerequisites
-- *
-
 1. Clone the Repository:
 ```
 git clone https://github.com/Sawanoza/SOEN357.git
 ```
 
-2. ...  
+2. Navigate to the application folder:
+```
+cd WorldEats
+```
+
+3. Install Dependencies
+```
+npm install
+```
+
+4. Start the Development Server
+```
+npx expo start
+```
