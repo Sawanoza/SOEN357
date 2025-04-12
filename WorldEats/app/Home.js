@@ -18,27 +18,27 @@ export default function Home() {
   const communityUpdates = [
     {
       caption: 'Share your favourite cultural recipes with the WorldEats community!',
-      image: require('../assets/1.png'),
+      image: require('../assets/home1.jpg'),
     },
     {
       caption: 'Explore recipes from around the world and tell us how your experience went!',
-      image: require('../assets/1.png'),
+      image: require('../assets/home2.jpg'),
     },
     {
       caption: 'Join discussions on how to adapt international dishes to your dietary goals!',
-      image: require('../assets/1.png'),
+      image: require('../assets/home3.jpg'),
     },
     {
       caption: 'Learn how others use food to relax, connect to heritage, and share their own rituals.',
-      image: require('../assets/1.png'),
+      image: require('../assets/home4.jpg'),
     },
     {
       caption: 'Join our weekly meal planning threads to stay organized and inspired.',
-      image: require('../assets/1.png'),
+      image: require('../assets/home5.jpg'),
     },
     {
       caption: 'Share tips and tricks on cultural food prep and traditions.',
-      image: require('../assets/1.png'),
+      image: require('../assets/home6.jpg'),
     },
   ];
 
