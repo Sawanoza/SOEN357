@@ -82,7 +82,7 @@ export default function Community() {
               <Image source={item.image} style={styles.cardImage} />
               <Text style={styles.caption}>{item.text}</Text>
               <View style={styles.fakeButton}>
-                <Text style={styles.fakeButtonText}>Join</Text>
+                <Text style={styles.fakeButtonText}>Join (WIP)</Text>
               </View>
             </View>
           ))}
@@ -95,7 +95,7 @@ export default function Community() {
               <Image source={item.image} style={styles.cardImage} />
               <Text style={styles.caption}>{item.text}</Text>
               <View style={styles.fakeButton}>
-                <Text style={styles.fakeButtonText}>Enter</Text>
+                <Text style={styles.fakeButtonText}>Enter (WIP)</Text>
               </View>
             </View>
           ))}
