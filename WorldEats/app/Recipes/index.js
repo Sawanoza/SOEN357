@@ -7,83 +7,15 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import Navbar from '../components/Navbar';
+import { useRouter } from 'expo-router';
+import Navbar from '../../components/Navbar';
 
-const allRecipes = [
-  {
-    title: 'Spicy Vegan Lentil Soup',
-    image: require('../assets/recipes1.webp'),
-    type: 'vegan',
-    time: '<30 min',
-    servings: 4,
-  },
-  {
-    title: 'Grilled Salmon Bowl',
-    image: require('../assets/recipes2.jpg'),
-    type: 'pescetarian',
-    time: '~1 hour',
-    servings: 2,
-  },
-  {
-    title: 'Vegetarian Pad Thai',
-    image: require('../assets/recipes3.jpg'),
-    type: 'vegetarian',
-    time: '~1 hour',
-    servings: 3,
-  },
-  {
-    title: 'Chickpea Curry',
-    image: require('../assets/recipes4.jpg'),
-    type: 'vegan',
-    time: '>1 hour',
-    servings: 6,
-  },
-  {
-    title: 'Shrimp Tacos',
-    image: require('../assets/recipes5.jpg'),
-    type: 'pescetarian',
-    time: '<30 min',
-    servings: 2,
-  },
-  {
-    title: 'Stuffed Peppers',
-    image: require('../assets/recipes6.jpg'),
-    type: 'vegetarian',
-    time: '>1 hour',
-    servings: 4,
-  },
-  {
-    title: 'Zucchini Noodles with Pesto',
-    image: require('../assets/recipes7.jpg'),
-    type: 'gluten-free',
-    time: '<30 min',
-    servings: 1,
-  },
-  {
-    title: 'Quinoa Salad Bowl',
-    image: require('../assets/recipes8.jpg'),
-    type: 'gluten-free',
-    time: '<30 min',
-    servings: 2,
-  },
-  {
-    title: 'Chocolate Avocado Mousse',
-    image: require('../assets/recipes9.jpg'),
-    type: 'dessert',
-    time: '<30 min',
-    servings: 3,
-  },
-  {
-    title: 'Rice Flour Banana Pancakes',
-    image: require('../assets/recipes10.jpg'),
-    type: 'gluten-free',
-    time: '~1 hour',
-    servings: 4,
-  },
-];
+import { allRecipes } from './allRecipes';
+
 
 export default function Recipes() {
   const [selectedFilters, setSelectedFilters] = useState([]);
+  const router = useRouter();
 
   const filters = [
     'vegan',
@@ -138,14 +70,22 @@ export default function Recipes() {
 
         <View style={styles.cardGrid}>
           {filteredRecipes.map((recipe, index) => (
-            <View key={index} style={styles.cardBlock}>
+            <TouchableOpacity
+              key={index}
+              style={styles.cardBlock}
+              onPress={() => {
+                console.log('Tapped:', recipe.id);
+                router.push({ pathname: '/Recipes/[id]', params: { id: recipe.id } });
+              }}
+              
+            >
               <Image source={recipe.image} style={styles.cardImage} />
               <Text style={styles.cardTitle}>{recipe.title}</Text>
               <Text style={styles.cardSubtitle}>
                 {recipe.type} | {recipe.time}
               </Text>
               <Text style={styles.servingsText}>Serves: {recipe.servings}</Text>
-            </View>
+            </TouchableOpacity>
           ))}
         </View>
       </ScrollView>
