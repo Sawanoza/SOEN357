@@ -14,14 +14,14 @@ export default function Community() {
   const sections = {
     Videos: [
       {
-        image: require('../assets/1.png'),
+        image: require('../assets/community1.jpg'),
         text: 'Watch this video to learn a quick and calming breakfast recipe from around the world...',
-        link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        link: 'https://www.youtube.com/shorts/jMh8ZvK5qxk',
       },
       {
-        image: require('../assets/1.png'),
+        image: require('../assets/community2.jpg'),
         text: 'Discover nutritious and time-saving meal prep routines inspired by global cuisines...',
-        link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+        link: 'https://www.youtube.com/shorts/HgwEsjrJSA4',
       },
     ],
     Groups: [
