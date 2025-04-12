@@ -47,4 +47,19 @@ export const loginUser = async (username, password) => {
   );
   return result.length > 0;
 };
+
+// SAVE MEAL PLANNER STATE UNTIL APP CLOSES
+export const planner = {
+  Monday: [],
+  Tuesday: [],
+  Wednesday: [],
+  Thursday: [],
+  Friday: [],
+  Saturday: [],
+  Sunday: [],
+};
+
+export const updatePlanner = (day, recipe) => {
+  planner[day].push(recipe);
+};
 //------------------------------------------------------------------------------------------
